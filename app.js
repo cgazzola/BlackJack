@@ -75,13 +75,16 @@ app.use(flash());
 app.use(function (req, res, next){
   res.locals.success_msg = req.flash('success_msg');
   res.locals.error_msg = req.flash('error_msg');
+  //passport sets its own flash messages, and it sets it to error
   res.locals.error = req.flash('error');
   next();
 });
 
 
-
+//root is mapped to routes
 app.use('/', routes);
+
+// user is mapped to users
 app.use('/users', users);
 
 // catch 404 and forward to error handler
