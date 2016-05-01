@@ -92,13 +92,13 @@ footer{
 	clear: both;
 }
 
-.page{
+/*.page{
 	width: 960px;
 	margin: 0 auto;
 	background-color: #fff;
 	min-height: 500px;
 	text-align: center;
-}
+}*/
 
 .dealer-cards .card, .player-cards .card {
 	margin-left: 5px;
@@ -120,6 +120,7 @@ footer{
 
 .dealer-total, .player-total{
 	margin-top: 10px;
+  text-align: center;
 }
 
  .buttons{

@@ -86,9 +86,9 @@ passport.deserializeUser(function(id, done) {
 });
 
 router.post('/login',
-  passport.authenticate('local', {successRedirect:'/', failureRedirect:'/users/login',failureFlash: true}),
+  passport.authenticate('local', {successRedirect:'/game', failureRedirect:'/users/login',failureFlash: true}),
   function(req, res) {
-    res.redirect('/');
+    res.redirect('/game');
   });
 
 router.get('/logout', function(req, res){
