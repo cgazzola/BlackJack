@@ -16,7 +16,7 @@ mongoose.connect('mongodb://localhost/passport_example');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
-
+var game = require('./routes/game');
 //init app
 
 var app = express();
@@ -86,6 +86,9 @@ app.use('/', routes);
 
 // user is mapped to users
 app.use('/users', users);
+
+// user is mapped to users
+app.use('/game', game);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
