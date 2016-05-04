@@ -42,7 +42,8 @@ router.post('/register', function(req, res){
 			name: name,
 			email:email,
 			username: username,
-			password: password
+			password: password,
+			funds: 500 // start with 500 dollars
 		});
 
 		User.createUser(newUser, function(err, user){
